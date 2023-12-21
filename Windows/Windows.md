@@ -4,6 +4,8 @@
 [PowerShell Web Downloads](https://github.com/h4ck3r-cat/file.transfers/blob/main/Windows/Windows.md#step-2-encode-file-to-base64)
 <br>
 [SMB Downloads](https://github.com/h4ck3r-cat/file.transfers/blob/main/Windows/Windows.md#smb-downloads)
+<br>
+[FTP Downloads]()
 ## PowerShell Base64 Encode & Decode
 This is the simplest and most conveinient method and does **not** require a network connection
 
@@ -101,4 +103,6 @@ Password for [WORKGROUP\user]:
 Try "help" to get a list of possible commands.
 smb: \>
 ```
-**Note:** in this case we did not specify a password so any password will be suffecient for accessing the files
+**Note:** in this case we did not specify a password so any password will be suffecient for accessing the files, although it is better to add credentials.
+
+## FTP Downloads
