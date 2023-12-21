@@ -5,7 +5,7 @@
 <br>
 [SMB Downloads](https://github.com/h4ck3r-cat/file.transfers/blob/main/Windows/Windows.md#smb-downloads)
 <br>
-[FTP Downloads]()
+[FTP Downloads](https://github.com/h4ck3r-cat/file.transfers/blob/main/Windows/Windows.md#ftp-downloads)
 ## PowerShell Base64 Encode & Decode
 This is the simplest and most conveinient method and does **not** require a network connection
 
