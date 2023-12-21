@@ -1,5 +1,6 @@
 # Windows
-[PowerShell Base64 Encode & Decode](https://github.com/h4ck3r-cat/file.transfers/blob/main/README.md#windows)
+[PowerShell Base64 Encode & Decode](https://github.com/h4ck3r-cat/file.transfers/edit/main/Windows.md#powershell-base64-encode--decode)
+[PowerShell Web Downloads](https://github.com/h4ck3r-cat/file.transfers/edit/main/Windows.md#powershell-base64-encode--decode)
 ## PowerShell Base64 Encode & Decode
 - This method does **not** require a network connection</li>
 
@@ -24,4 +25,25 @@ PS> Get-FileHash Output.txt -Algorithm md5
 
 F4D11DCE99A848FE050AB3EF2C966B62
 ```
-If the MD5 hash is the same, we succeeded in trasfering the file.
+If the MD5 hashs are the same, we succeeded in trasfering the file.
+> [!IMPORTANT]
+> If the MD5 hashs do not match then you might have a few reasons why:
+> 1. Line Endings: Different operating systems use different conventions for line endings in text files. Windows typically uses CRLF (\r\n), while Unix-based systems use LF (\n). If the line endings are different, it can result in different MD5 checksums.
+> 2. Encoding Differences: If the files are text files and have different character encodings (e.g., UTF-8 vs. UTF-16), this can result in different MD5 checksums.
+> 3. Whitespace Differences: Extra whitespace (leading/trailing spaces, tabs, etc.) can also cause differences in MD5 checksums.
+
+By addressing these factors, you should be able to get consistent MD5 checksums for files with identical content.
+
+## PowerShell Web Downloads
+PowerShell provides a versatile array of **file transfer** capabilities, with the *System.Net.WebClient* class serving as a reliable tool for downloading files across **HTTP**, **HTTPS**, or **FTP** protocols. Within this class, various methods cater to different download requirements. The following table outlines key **WebClient** methods designed for downloading data from a resource, each catering to specific scenarios:
+
+| Method              | Description                                                                                             |
+|---------------------|---------------------------------------------------------------------------------------------------------|
+| OpenRead            | Retrieves data from a resource and returns it as a Stream.                                               |
+| OpenReadAsync       | Asynchronously obtains data from a resource without blocking the calling thread.                         |
+| DownloadData        | Downloads data from a resource and returns it as a Byte array.                                           |
+| DownloadDataAsync   | Asynchronously downloads data from a resource, returning a Byte array without blocking the calling thread.|
+| [DownloadFile]()        | Downloads data from a resource and saves it to a local file.                                             |
+| DownloadFileAsync   | Asynchronously downloads data from a resource to a local file without blocking the calling thread.       |
+| DownloadString      | Retrieves a String from a resource and returns it as a String.                                            |
+| DownloadStringAsync | Asynchronously downloads a String from a resource without blocking the calling thread.                    |
