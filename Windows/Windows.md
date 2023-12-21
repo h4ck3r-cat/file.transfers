@@ -3,7 +3,7 @@
 <br>
 [PowerShell Web Downloads](https://github.com/h4ck3r-cat/file.transfers/edit/main/Windows/Windows.md#step-2-encode-file-to-base64)
 <br>
-[SMB Downloads](https://github.com/h4ck3r-cat/file.transfers/edit/main/Windows.md#po)
+[SMB Downloads](https://github.com/h4ck3r-cat/file.transfers/blob/main/Windows/Windows.md#smb-downloads)
 ## PowerShell Base64 Encode & Decode
 This is the simplest and most conveinient method and does **not** require a network connection
 
