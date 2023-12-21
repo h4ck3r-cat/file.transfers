@@ -1,6 +1,9 @@
 # Windows
 [PowerShell Base64 Encode & Decode](https://github.com/h4ck3r-cat/file.transfers/edit/main/Windows.md#powershell-base64-encode--decode)
-[PowerShell Web Downloads](https://github.com/h4ck3r-cat/file.transfers/edit/main/Windows.md#powershell-base64-encode--decode)
+<br>
+[PowerShell Web Downloads](https://github.com/h4ck3r-cat/file.transfers/edit/main/Windows/Windows.md#step-2-encode-file-to-base64)
+<br>
+[SMB Downloads](https://github.com/h4ck3r-cat/file.transfers/edit/main/Windows.md#po)
 ## PowerShell Base64 Encode & Decode
 This is the simplest and most conveinient method and does **not** require a network connection
 
@@ -64,3 +67,4 @@ PS> IEX (New-Object Net.WebClient).DownloadString('<Target File URL>')
 ```powershell
 PS> Invoke-WebRequest <Target File URL> -OutFile <Output File Name>
 ```
+## SMB Downloads
