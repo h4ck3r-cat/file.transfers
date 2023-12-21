@@ -1,7 +1,7 @@
 # Windows
-[PowerShell Base64 Encode & Decode](https://github.com/h4ck3r-cat/file.transfers/edit/main/Windows.md#powershell-base64-encode--decode)
+[PowerShell Base64 Encode & Decode](https://github.com/h4ck3r-cat/file.transfers/blob/main/Windows.md#powershell-base64-encode--decode)
 <br>
-[PowerShell Web Downloads](https://github.com/h4ck3r-cat/file.transfers/edit/main/Windows/Windows.md#step-2-encode-file-to-base64)
+[PowerShell Web Downloads](https://github.com/h4ck3r-cat/file.transfers/blob/main/Windows/Windows.md#step-2-encode-file-to-base64)
 <br>
 [SMB Downloads](https://github.com/h4ck3r-cat/file.transfers/blob/main/Windows/Windows.md#smb-downloads)
 ## PowerShell Base64 Encode & Decode
